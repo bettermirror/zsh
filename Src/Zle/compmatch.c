@@ -2217,7 +2217,7 @@ join_sub(Cmdata md, char *str, int len, int *mlen, int sfx, int join)
 	int t;
 
 	if (sfx) {
-	    ow += ol; nw += nl;
+	    ow += ol;
 	}
 	for (t = 0, ms = bmatchers; ms && !t; ms = ms->next) {
 	    mp = ms->matcher;
@@ -2262,7 +2262,7 @@ join_sub(Cmdata md, char *str, int len, int *mlen, int sfx, int join)
 		    else
 			mw = nw - (sfx ? mp->wlen : 0);
 
-		    if ((bl = bld_line(mp, line, mw, (t ? nw : ow),
+		    if ((bl = bld_line(mp, line, mw, (t ? nw - (sfx ? nl : 0) : str),
 				       (t ? nl : ol), sfx)))  {
 			/* Yep, one of the lines matched the other
 			 * string. */

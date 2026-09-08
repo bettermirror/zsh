@@ -1,3 +1,7 @@
+2026-09-18  Mikael Magnusson  <mikachu@gmail.com>
+
+	* 55140: Src/Zle/compmatch.c: fix pointer math in join_sub
+
 2026-09-09  Bart Schaefer  <schaefer@zsh.org>
 
 	* Jim <linux.tech.guy@gmail.com>: 55130: Functions/Misc/colors:
